@@ -43,8 +43,10 @@ class MyHashTable<K,V> implements Iterable<MyHashTable<K,V>.HashEntry>{
 		this.buckets = new ArrayList<LinkedList<HashEntry>>(numBuckets);
 		
 	    for (int i = 0; i < numBuckets; i++) {
-	    	buckets.add(null);
+	    	buckets.get(i) = new LinkedList<HashEntry>();
 	    }
+
+		
 		//set the size of buckets to be equal to numBuckets
 		
 		
